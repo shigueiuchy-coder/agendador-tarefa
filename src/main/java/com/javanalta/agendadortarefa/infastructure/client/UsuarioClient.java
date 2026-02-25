@@ -1,7 +1,6 @@
 package com.javanalta.agendadortarefa.infastructure.client;
 
 import com.javanalta.agendadortarefa.business.dto.UsuarioDTO;
-import org.apache.tomcat.util.http.parser.Authorization;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,5 +13,4 @@ public interface UsuarioClient {
     @GetMapping("/usuario")
     UsuarioDTO buscaUsuarioPorEmail(@RequestParam("email") String email,
                                     @RequestHeader("Authorization") String token);
-
 }
